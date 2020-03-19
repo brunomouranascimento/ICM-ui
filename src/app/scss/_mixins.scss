@@ -1,0 +1,43 @@
+@mixin device($size) {
+  @if $size==small-smartphone {
+    @media only screen and (max-height: 320px) {
+      @content;
+    }
+  }
+
+  @else if $size==smartphone {
+    @media only screen and (max-height:568px) {
+      @content;
+    }
+  }
+
+  @else if $size==big-smartphone {
+    @media only screen and (min-height:667px) {
+      @content;
+    }
+  }
+
+  @else if $size==tablet {
+    @media only screen and (min-height: 1024px) {
+      @content;
+    }
+  }
+
+  @else if $size==big-tablet {
+    @media only screen and (min-height: 1366px) {
+      @content;
+    }
+  }
+
+  @else if $size==notebook {
+    @media (max-width: 1600px) {
+      @content;
+    }
+  }
+
+  @else if $size==big-desktop {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+}

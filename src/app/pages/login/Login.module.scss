@@ -1,0 +1,43 @@
+@import '../../scss/mixins';
+
+.paper {
+  margin-top: 22vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+
+  @include device(smartphone) {
+    margin-top: 16vh;
+  }
+
+  @include device(big-smartphone) {
+    margin-top: 23vh;
+  }
+
+  @include device(tablet) {
+    margin-top: 30vh;
+  }
+
+  @include device(big-tablet) {
+    margin-top: 35vh;
+  }
+
+  .logo {
+    margin: 8px;
+    height: 64px;
+
+    @include device(smartphone) {
+      height: 44px;
+    }
+  }
+
+  .form {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .submit {
+    margin: 24px 0 16px
+  }
+}

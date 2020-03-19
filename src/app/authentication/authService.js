@@ -1,9 +1,16 @@
 export const TOKEN_KEY = '@ICM-Token';
-export const isAuthenticated = () => sessionStorage.getItem(TOKEN_KEY) !== null;
-export const login = token => {
-  sessionStorage.setItem(TOKEN_KEY, token);
+export const USER_KEY = '@ICM-User';
+export const getToken = () => sessionStorage.getItem(TOKEN_KEY);
+export const isAuthenticated = () => localStorage.getItem(TOKEN_KEY) !== null;
+
+export const setToken = token => {
+  localStorage.setItem(TOKEN_KEY, token);
 };
-export const logout = () => {
-  sessionStorage.removeItem(TOKEN_KEY);
-  sessionStorage.removeItem('user');
+export const setUser = user => {
+  localStorage.setItem(USER_KEY, user);
+};
+
+export const authService = {
+  setToken,
+  setUser
 };

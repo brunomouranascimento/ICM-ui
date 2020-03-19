@@ -1,0 +1,32 @@
+* {
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+
+  &:active,
+  :focus {
+    outline: none !important;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+label {
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
