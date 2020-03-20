@@ -1,14 +1,19 @@
 import { api } from '../../services/api';
 import { TOKEN_KEY } from '../../authentication/authService';
 
-async function login(userData) {
-  const response = await api.post('/authenticate', userData);
-  return response.data;
-}
+const login = userData => {
+  try {
+    return api.post('/authenticate', userData).then(response => {
+      return response.data;
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
 
-async function logout() {
+const logout = () => {
   localStorage.removeItem(TOKEN_KEY);
-}
+};
 
 export const loginService = {
   login,

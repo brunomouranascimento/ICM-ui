@@ -7,9 +7,8 @@ export default function Dashboard() {
 
   return (
     <div>
-      <h1>Olá {name}, seja bem vinda!</h1>
+      <h1>Olá {name}, seja bem vindo!</h1>
       <br />
-      <h1>Te amo, rs!</h1>
     </div>
   );
 }
