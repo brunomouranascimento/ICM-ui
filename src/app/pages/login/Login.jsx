@@ -17,9 +17,8 @@ import { authService } from '../../authentication/authService';
 import logoICM from '../../../assets/images/logo_icm.png';
 
 import styles from './Login.module.scss';
-import { withRouter } from 'react-router-dom';
 
-export function Login(props) {
+export default function Login(props) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -111,5 +110,3 @@ export function Login(props) {
     </Container>
   );
 }
-
-export default withRouter(Login);
