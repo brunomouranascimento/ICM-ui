@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
   Button,
-  CssBaseline,
   TextField,
   Link,
   Grid,
@@ -36,11 +35,11 @@ export default function Login(props) {
     setLoggingIn(true);
     e.preventDefault();
     if (!email) {
-      setErrorMessage('Digite um usuário');
+      setErrorMessage('Digite um usuário.');
       setOpen(true);
     }
     if (email && !password) {
-      setErrorMessage('Digite uma senha');
+      setErrorMessage('Digite uma senha.');
       setOpen(true);
     }
 
@@ -76,7 +75,6 @@ export default function Login(props) {
   return (
     <Container component="main" maxWidth="xs" className={styles.container}>
       <Paper elevation={3}>
-        <CssBaseline />
         <div className={styles.paper}>
           <img src={logoICM} alt="ICM logo" className={styles.logo} />
           <form className={styles.form} noValidate autoComplete="off">

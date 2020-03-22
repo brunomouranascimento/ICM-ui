@@ -17,6 +17,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "dev": "REACT_APP_ICM_URL_CORE=http://localhost:3333 npm start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
