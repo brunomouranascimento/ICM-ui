@@ -7,7 +7,8 @@ import {
   Paper,
   Snackbar,
   InputAdornment,
-  IconButton
+  IconButton,
+  Typography
 } from '@material-ui/core';
 import MuiAlert from '@material-ui/lab/Alert';
 import { Visibility, VisibilityOff } from '@material-ui/icons';
@@ -24,5 +25,6 @@ export {
   MuiAlert,
   Visibility,
   VisibilityOff,
-  InputAdornment
+  InputAdornment,
+  Typography
 };
