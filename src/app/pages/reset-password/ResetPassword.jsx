@@ -24,6 +24,9 @@ import Notify from '../../components/core/notify/Notify';
 import styles from './ResetPassword.module.scss';
 
 export default function ResetPassword(props) {
+  const [checkingTokenMessage, setCheckingTokenMessage] = useState(
+    'Validando token...'
+  );
   const [validToken, setValidToken] = useState(false);
   const [formForgotPasssowrd, setFormForgotPasssowrd] = useState({
     password: '',
@@ -43,9 +46,13 @@ export default function ResetPassword(props) {
       resetPasswordService
         .checkToken(token)
         .then(response => {
+          console.log(response);
           if (response.validToken) setValidToken(true);
         })
-        .catch(error => {});
+        .catch(error => {
+          setCheckingTokenMessage('Token inválido ou expirado');
+          console.log(error);
+        });
     };
 
     checkToken();
@@ -197,9 +204,9 @@ export default function ResetPassword(props) {
                 <Typography
                   className={styles.typography}
                   component="h1"
-                  variant="h5"
+                  variant="h6"
                 >
-                  Token inválido
+                  {checkingTokenMessage}
                 </Typography>
               )}
             </Grid>
